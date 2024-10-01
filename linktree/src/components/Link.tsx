@@ -13,12 +13,14 @@ type LinkPropsType = {
 const Link = ({title, url, icon, type}: LinkPropsType) => {
 
   return (
-      <a className={`link-${type}-item`} href={url}>
-        <div className={`link-content`}>
-            <img src={icon} alt="Link" />
-            <p>{title}</p>
-        </div>
-      </a>
+    // TODO: if the type is grid, then display the icon as an image above the text
+    // TODO: if the type is list, then display the icon as an image on the left side of the text  
+    <a className={`link-${type}-item`} href={url}>
+      <div className={`link-content`}>
+        <img src={icon} alt="Link" />
+        <p>{title}</p>
+      </div>
+    </a>
   )
 }
 

@@ -7,17 +7,17 @@ export const profiles = [
     image: "/john-doe.png",
     socials: [
       {
-        name: "Instagram",
+        name: "Follow me on Instagram",
         url: "https://www.instagram.com/john.doe",
         icon: "/instagram.svg"
       },
       {
-        name: "Facebook",
+        name: "Follow me on Facebook",
         url: "https://www.facebook.com/john.doe",
         icon: "/facebook.svg"
       },
       {
-        name: "Youtube",
+        name: "Check out my Youtube",
         url: "https://www.youtube.com/john.doe",
         icon: "/youtube.svg"
       }
@@ -29,13 +29,13 @@ export const profiles = [
         links: [
           {
             id: "1",
-            title: "Instagram",
+            title: "Follow me on Instagram",
             url: "https://www.instagram.com/john.doe",
             icon: "/instagram.svg"
           },
           {
             id: "2",
-            title: "Facebook",
+            title: "Follow me on Facebook",
             url: "https://www.facebook.com/john.doe",
             icon: "/facebook.svg"
           }
@@ -47,13 +47,13 @@ export const profiles = [
         links: [
           {
             id: "3",
-            title: "Tidal",
+            title: "Check out my music on Tidal",
             url: "https://www.tidal.com/john.doe",
             icon: "/tidal.svg"
           },
           {
             id: "4",
-            title: "Apple Music",
+            title: "Check out my music on Apple Music",
             url: "https://www.apple.com/music/john.doe",
             icon: "/apple-music.svg"
           }
@@ -73,19 +73,19 @@ export const profiles = [
         links: [
           {
             id: "5",
-            title: "Instagram",
+            title: "Follow me on Instagram",
             url: "https://www.instagram.com/janedoe",
             icon: "/instagram.svg"
           },
           {
             id: "6",
-            title: "Facebook",
+            title: "Follow me on Facebook",
             url: "https://www.facebook.com/janedoe",
             icon: "/facebook.svg"
           },
           {
             id: "7",
-            title: "Youtube",
+            title: "Check out my Youtube channel",
             url: "https://www.youtube.com/janedoe",
             icon: "/youtube.svg"
           }
