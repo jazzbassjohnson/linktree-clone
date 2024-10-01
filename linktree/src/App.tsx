@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import { UserProfile } from './components/UserProfile';
 import './App.css';
+import { profiles } from './utils/profiles';
+import { Profile } from './components/types';
+// TODO: Implement user profile with a name, bio, avatar, and links
+// Update this to handle setting the user's custom theme
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <div className="App">
+    <UserProfile profile={profiles[0] as unknown as Profile} />
+  </div>
 }
 
 export default App;
