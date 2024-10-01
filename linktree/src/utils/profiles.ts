@@ -5,10 +5,27 @@ export const profiles = [
     name: "John Doe",
     description: "Influencer",
     image: "/john-doe.png",
+    socials: [
+      {
+        name: "Instagram",
+        url: "https://www.instagram.com/john.doe",
+        icon: "/instagram.svg"
+      },
+      {
+        name: "Facebook",
+        url: "https://www.facebook.com/john.doe",
+        icon: "/facebook.svg"
+      },
+      {
+        name: "Youtube",
+        url: "https://www.youtube.com/john.doe",
+        icon: "/youtube.svg"
+      }
+    ],
     groups: [
       {
         title: "Social Media",
-        viewType: "LIST",
+        viewType: "list",
         links: [
           {
             id: "1",
@@ -26,7 +43,7 @@ export const profiles = [
       },
       {
         title: "Music",
-        viewType: "GRID",
+        viewType: "grid",
         links: [
           {
             id: "3",
@@ -52,7 +69,7 @@ export const profiles = [
     groups: [
       {
         title: "Social Media",
-        viewType: "LIST",
+        viewType: "list",
         links: [
           {
             id: "5",

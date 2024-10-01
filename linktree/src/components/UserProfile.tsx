@@ -4,6 +4,7 @@ import { UserAvatar } from "./UserAvatar"
 import { LinkGroup } from "./LinkGroup"
 import { Username } from "./Username"
 import { Profile } from "./types"
+import { SocialRow } from "./SocialRow"
 // TODO: Implement styled components
 // TODO: Implement user profile with a name, bio, avatar, and links
 export const UserProfile = ({profile}: {profile: Profile}) => {
@@ -16,8 +17,8 @@ export const UserProfile = ({profile}: {profile: Profile}) => {
       </div>
   
       <Username name="John Doe"  verified={true} />
-  
-      <UserBio bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+      <UserBio bio={profile.description} />
+      <SocialRow socials={profile.socials} />
 
       {profile?.groups.map((group) => (
         <LinkGroup group={group} />

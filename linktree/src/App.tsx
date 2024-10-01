@@ -6,7 +6,9 @@ import { Profile } from './components/types';
 // TODO: Implement user profile with a name, bio, avatar, and links
 // Update this to handle setting the user's custom theme
 
+// TODO: Implement routing to handle different profiles
 function App() {
+  
   return <div className="App">
     <UserProfile profile={profiles[0] as unknown as Profile} />
   </div>

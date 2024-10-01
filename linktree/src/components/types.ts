@@ -1,4 +1,4 @@
-export type LinkViewType = "LIST" | "GRID"
+export type LinkViewType = "list" | "grid"
 
 export type LinkType = {
   id: string
@@ -13,10 +13,18 @@ export type LinkGroupType = {
   links: LinkType[]
 }
 
+
 export type Profile = {
   name: string
   description: string
   image: string
   groups: LinkGroupType[]
   verified: boolean
+  socials: Social[]
+}
+
+export type Social = {
+  name: string
+  url: string
+  icon: string
 }

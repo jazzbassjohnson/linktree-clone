@@ -11,18 +11,15 @@ type LinkPropsType = {
 }
 
 const Link = ({title, url, icon, type}: LinkPropsType) => {
-  return <div>
-    {type === "LIST" && <div>
-      <img src={icon} alt="Link" />
-      <h2>{title}</h2>
-      <a href={url}>{url}</a>
-    </div>}
-    {type === "GRID" && <div>
-      <img src={icon} alt="Link" />
-      <h2>{title}</h2>
-      <a href={url}>{url}</a>
-    </div>} 
-  </div>
+
+  return (
+      <a className={`link-${type}-item`} href={url}>
+        <div className={`link-content`}>
+            <img src={icon} alt="Link" />
+            <p>{title}</p>
+        </div>
+      </a>
+  )
 }
 
 export default Link
