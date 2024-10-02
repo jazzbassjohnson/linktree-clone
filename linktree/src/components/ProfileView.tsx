@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom';
 import { UserProfile } from './UserProfile';
 import { Profile } from './types';
 import { fetchProfile } from '../utils/profiles';
+import { ThemeProvider } from './ThemeProvider';
 
-
-import '../App.css';
+import '../ProfileView.css';
 
 function ProfileView() {
   const { id } = useParams<{ id: string }>();
@@ -24,7 +24,9 @@ function ProfileView() {
     </div>
   }
   return <div className="ProfileView">
-    <UserProfile profile={profile as unknown as Profile} />
+    <ThemeProvider>
+      <UserProfile profile={profile as unknown as Profile} />
+    </ThemeProvider>
   </div>
 }
 

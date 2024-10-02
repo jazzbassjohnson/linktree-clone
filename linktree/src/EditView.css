@@ -1,0 +1,54 @@
+@import "./ProfileView.css";
+
+/* Flex container for the editing tools and profile view */
+.edit-view-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flex column for editing tools */
+.edit-tools {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flex column for the profile view */
+.profile-view-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.theme-input-container {
+  margin-bottom: 20px;
+}
+
+.theme-input-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.theme-input-container input[type="color"] {
+  display: block;
+}
+
+.remove-background-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #f00;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

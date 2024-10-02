@@ -9,17 +9,22 @@ import { UserBio } from "./UserBio"
 import { Username } from "./Username"
 
 export const UserProfile = ({profile}: {profile: Profile}) => {
-
+  // TODO: Implement the theme provider
   const { theme, setTheme } = useContext(ThemeContext)
-  const background = theme.backgroundImage ? `url(${theme.backgroundImage})` : theme.backgroundColor
-  const { primaryColor, secondaryColor } = theme
 
+  // set them on the theme provider
   useEffect(() => {
     setTheme(profile.theme)
   }, [profile.theme, setTheme])
-  
+
   return (
-    <div className="profile-container" style={{ padding: "40px", display: "flex", flexDirection: "column", alignItems: "center", background: background, color: primaryColor, border: `2px solid ${secondaryColor}`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat", height: "100vh" }}>
+    <div className="profile-container" style={{ 
+      color: theme.primaryColor,
+      backgroundColor: theme.backgroundColor,
+      backgroundImage: theme.backgroundImage ? `url(${theme.backgroundImage})` : "none",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}>
   
       {/* Avatar */}
       <div style={{ display: "flex", justifyContent: "center" }}>
@@ -36,11 +41,11 @@ export const UserProfile = ({profile}: {profile: Profile}) => {
       
       {/* Link groups */}
       {profile?.groups.map((group) => (
-        <LinkGroup group={group} />
+        <LinkGroup group={group} key={group.title} />
       ))}
       
       {/* Footer */}
       <div style={{ marginTop: "40px" }}>*Footer*</div>
-    </div>
-  )
+  </div>
+)
 }

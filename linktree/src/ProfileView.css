@@ -42,13 +42,11 @@
 }
 
 .profile-container {
-  padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: background;
-  color: primaryColor;
-  border: 2px solid secondaryColor;
+  height: 100vh;
+  padding: 40px;
 }
 
 /* grid item */
