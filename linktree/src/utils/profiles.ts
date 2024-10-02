@@ -29,7 +29,9 @@
  * }
  */
 
-export const profiles = [
+import { Profile } from "../components/types"
+
+export const profiles: Profile[] = [
   {
     id: "1",
     name: "John Doe",
@@ -135,6 +137,20 @@ export const profiles = [
         ]
       }
     ],
+    socials: [],
     verified: false
   },
 ]
+
+export const fetchProfile = (id: string): Promise<Profile> => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const profile: Profile | undefined = profiles.find((profile) => profile.id === id)
+      if (profile) {
+        resolve(profile)
+      } else {
+        reject(new Error("Profile not found"))
+      }
+    }, 1000)
+  })
+}

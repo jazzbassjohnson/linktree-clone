@@ -1,16 +1,23 @@
-import React from 'react';
-import { UserProfile } from './UserProfile';
-import '../App.css';
-import { profiles } from '../utils/profiles';
-import { Profile } from './types';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-// TODO: Implement user profile with a name, bio, avatar, and links
-// Update this to handle setting the user's custom theme
+import { UserProfile } from './UserProfile';
+import { Profile } from './types';
+import { fetchProfile } from '../utils/profiles';
 
-// TODO: Implement routing to handle different profiles
+
+import '../App.css';
+
 function ProfileView() {
   const { id } = useParams<{ id: string }>();
-  const profile = profiles.find((profile) => profile.id === id);
+  const [profile, setProfile] = useState<Profile | null>(null);
+  useEffect(()=> {
+    if (id) {
+      fetchProfile(id).then((profile) => {
+        setProfile(profile)
+      });
+    }
+  }, [id])
+
   if (!profile) {
     return <div className="ProfileView">
       <h1>Profile not found</h1>
