@@ -1,15 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import reportWebVitals from './reportWebVitals';
+import ProfileView from './components/ProfileView';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter >
+      <Routes>
+        {/* TODO: Implement profile view as a nested routes */}
+        <Route path="/" element={<ProfileView />} />  
+        <Route path="/:id" element={<ProfileView />} />
+        <Route path="/edit/:id/" element={<ProfileView />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

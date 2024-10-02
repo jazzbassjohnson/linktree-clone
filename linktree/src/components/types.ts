@@ -15,16 +15,26 @@ export type LinkGroupType = {
 
 
 export type Profile = {
+  id: string
   name: string
   description: string
   image: string
   groups: LinkGroupType[]
   verified: boolean
   socials: Social[]
+  theme: Theme
 }
 
 export type Social = {
   name: string
   url: string
   icon: string
+}
+
+// TODO: Create model for theme
+export type Theme = {
+  primaryColor: string
+  secondaryColor: string
+  backgroundColor: string
+  backgroundImage: string
 }

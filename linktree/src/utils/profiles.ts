@@ -2,9 +2,16 @@
 // TODO: Add groups of links to the profile
 export const profiles = [
   {
+    id: "1",
     name: "John Doe",
     description: "Influencer",
     image: "/john-doe.png",
+    theme: {
+      primaryColor: "#000000",
+      secondaryColor: "#FFFFFF",
+      backgroundColor: "#000000",
+      backgroundImage: "/background-image.png"
+    },
     socials: [
       {
         name: "Follow me on Instagram",
@@ -63,9 +70,15 @@ export const profiles = [
     verified: true
   },
   {
+    id: "2",
     name: "Jane Doe",
     description: "Software Engineer & Influencer",
     image: "/jane-doe.png",
+    theme: {
+      primaryColor: "#000000",
+      secondaryColor: "#FFFFFF",
+      backgroundColor: "#000000",
+    },
     groups: [
       {
         title: "Social Media",
