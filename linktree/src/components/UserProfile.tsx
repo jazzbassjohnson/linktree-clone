@@ -7,6 +7,7 @@ import { useEffect } from "react"
 import { UserAvatar } from "./UserAvatar"
 import { UserBio } from "./UserBio"
 import { Username } from "./Username"
+
 export const UserProfile = ({profile}: {profile: Profile}) => {
 
   const { theme, setTheme } = useContext(ThemeContext)
