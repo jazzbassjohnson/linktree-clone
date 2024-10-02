@@ -1,5 +1,34 @@
-// TODO: Create a JSON data structure to represent the profile with the required fields (profile image, username, bio, social icons, and links).
-// TODO: Add groups of links to the profile
+// TODO: Rewrite the profiles to use the new data structure
+// The new data structure is more flexible and can be used to create more complex profiles
+/**
+ * {
+ *  id: string;
+ *  name: string;
+ *  description: string;
+ *  image_url: string;
+ *  theme: {
+ *    primary_color: string;
+ *    secondary_color: string;
+ *    background_image_url: string;
+ *  };
+ *  content: {
+ *    title: string;
+ *    items: {
+ *      id: string;
+ *      title: string;
+ *      links: {
+ *        id: string;
+ *        title: string;
+ *        url: string;
+ *        icon_url: string;
+ *        view_type: "list" | "grid";
+ *      }[];
+ *    }[];
+ *  }[];
+ *  verified: boolean;
+ * }
+ */
+
 export const profiles = [
   {
     id: "1",
