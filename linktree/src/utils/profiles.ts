@@ -78,7 +78,7 @@ export const profiles = [
         ],
       },
       {
-        title: "Music",
+        title: "My Music",
         viewType: "grid",
         links: [
           {
@@ -104,9 +104,10 @@ export const profiles = [
     description: "Software Engineer & Influencer",
     image: "/jane-doe.png",
     theme: {
-      primaryColor: "#000000",
-      secondaryColor: "#FFFFFF",
-      backgroundColor: "#000000",
+      primaryColor: "#FFFFFF",
+      secondaryColor: "#000000",
+      backgroundImage: "/adire-fabric-from-nigeria.png",
+      backgroundColor: "#FFFFFF"
     },
     groups: [
       {
